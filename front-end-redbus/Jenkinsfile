@@ -50,7 +50,7 @@ pipeline {
                 dir('front-end-redbus') {
                     sh '''
                         export NODE_OPTIONS="--openssl-legacy-provider --max-old-space-size=2048"
-                        npm run build
+                        CI=false npm run build
                     '''
                 }
             }
