@@ -6,7 +6,7 @@ pipeline {
         stage('Clone Backend Code') {
             steps {
                 git branch: 'master',
-                    credentialsId: 'pat-creds',
+                    credentialsId: 'git-cred',
                     url: 'https://github.com/peakyblinder0509/redbus.git'
             }
         }
